@@ -34,13 +34,18 @@ return [
     | Supported: "session", "token"
     |
     */
+    
     'guards' => [
-        'api' => [
+        'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+ 
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
     ],
-
     // optional, if use eloquent
     'providers' => [
         'users' => [
